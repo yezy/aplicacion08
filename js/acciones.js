@@ -53,7 +53,7 @@ navigator.geolocation.getCurrentPosition(Localiza, ErrorLocalizacion);
 							'Preciision de Altitud:' + posicion.coords.altitudeAccuracy      +'<br />' +
 							'Direccion:' + posicion.coords.heading      +'<br />' +
 							'Velocidad:' + posicion.coords.speed      +'<br />' +
-							'Intervalo:' + posicion.coords.timestamp      +'<br />';
+							'Intervalo:' + posicion.timestamp      +'<br />';
 	}
 	//Error en la geolocalizacion
 	function ErrorLocalizacion(error) {
