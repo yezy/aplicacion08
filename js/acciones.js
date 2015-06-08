@@ -7,17 +7,17 @@ $(document).ready(function(e) {
 	
 	// Cuando esta listo el dispositivo
 	function Dispositivo_Listo() {
-		comienza();
+		Comienza();
 	}
 	
 	//Empieza la 'observacion' de la aceleracion
-	function comienza() {
+	function Comienza() {
 		
 		//Actualiza la aceleracion cada 2 segundos
 		//
 		var opciones = { frequency:2000};
 		
-		watchID = navigator.accelerometer.watchAcceleration(Correcto, Error, Opciones);
+		watchID = navigator.accelerometer.watchAcceleration(Correcto, Error, opciones);
 navigator.geolocation.getCurrentPosition(Localiza, ErrorLocalizacion);
 	}
 	// Detiene la 'observacion' de la aceleracion
@@ -44,7 +44,7 @@ navigator.geolocation.getCurrentPosition(Localiza, ErrorLocalizacion);
 		alert('Error!');
 	}
 	// Exito al localizar
-	function Localiza(position) {
+	function Localiza(posicion) {
 		var element = document.getElementById('geolocalizacion');
 		element.innerHTML = 'Latitud:' + posicion.coords.latitude      +'<br />' +
 		                    'Longitud:' + posicion.coords.longitude     +'<br />' +
